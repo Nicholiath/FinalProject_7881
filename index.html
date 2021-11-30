@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<form>
+		<input type="text" id="number" value="0"/>
+		<input type="button" onclick="higher()" value="Higher" />
+		<!--<input type="button" onclick="lower()" value="Lower" />-->
+	</form>
+	<script>
+		function higher() {
+			var value = parseInt(document.getElementById('number').value, 10);
+			value = isNaN(value) ? 0 : value;
+			value++;
+			document.getElementById('number').value = value;
+		}
+		function lower() {
+			var value = parseInt(document.getElementById('number').value, 10);
+			value = isNaN(value) ? 0 : value;
+			value--;
+			document.getElementById('number').value = value;
+		}
+	</script>
+</body>
+</html>
